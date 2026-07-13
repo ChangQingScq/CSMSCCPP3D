@@ -40,7 +40,9 @@ pt = BFFAuto(v, f);
 u = zeros(length(B), 1);
 %u(1:90) =1.5;
 u= u+log(3);
-pt2 = BFFScale(v, f, u);
+pt2 = BFFScale(v, f, u);% see https://peng00bo00.github.io/blog/2022/GAMES301-BFF/ ---Fixed a small bug
+
+Fixed a small bug
 %myPlot(pt,'.');
 
 %[Umin,Umax,Cmin,Cmax,Cmean,Cgauss,Normal] = compute_curvature(v,f);
