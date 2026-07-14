@@ -2,7 +2,7 @@ function [curvature2Gradient, gradientVec, triangleCenter, A_t] = getCurvature2G
 
 [gradientVec, gradientTangent, normalizedNormVec, triangleCenter, A_t] = compute_gradient(v, f, scalar);
 
-normGradientVec = gradientVec./vecnorm(gradientVec,2,2);
+normGradientVec = gradientVec./(vecnorm(gradientVec,2,2) + eps);
 
 uComponent = dot(Tp', normGradientVec')';
 vComponent = dot(Bp', normGradientVec')';
