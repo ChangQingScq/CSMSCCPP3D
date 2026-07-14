@@ -1,5 +1,5 @@
 function [vCSM] = conformalSlitMappingAGNK(vFlatten, freeboundsList, cornerIdx, longestBoundIdx, n, originOffset, alpha);
-% Adjoint Generalized Neumann Kernel method
+% The current implementation is based on the GNK method, while the AGNK method is under preparation.
 
 format long g
 %
