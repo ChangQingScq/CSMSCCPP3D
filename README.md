@@ -48,6 +48,16 @@ keywords = {Iso-level tool path, Globally optimal, PDE, Iso-scallop, Smooth}
 
 }
 
+@INPROCEEDINGS{6567019,
+  author={Ban, Xiaomeng and Goswami, Mayank and Zeng, Wei and Gu, Xianfeng and Gao, Jie},
+  booktitle={2013 Proceedings IEEE INFOCOM}, 
+  title={Topology dependent space filling curves for sensor networks and applications}, 
+  year={2013},
+  volume={},
+  number={},
+  pages={2166-2174},
+  keywords={Harmonic analysis;Planning;Indexing;Shape;Educational institutions;Data integration;Approximation methods},
+  doi={10.1109/INFCOM.2013.6567019}}
 
 
 @inproceedings{1018408.1018660,
