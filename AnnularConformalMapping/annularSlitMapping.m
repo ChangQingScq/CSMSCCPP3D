@@ -11,7 +11,7 @@ function[tau] = annularSlitMapping(v, f, inner_bd_id)
 % rely on:
 % insertrows()
 
-[all_v_sliced, all_f_sliced, all_slice_path, outer_bd_id] = sliceMesh(v, f);%有bug
+[all_v_sliced, all_f_sliced, all_slice_path, outer_bd_id] = sliceMesh(v, f);%rely on Matlab2021 toolbox bioinfo graphshortestpath
 
 all_f_0 = {};
 all_eta = {};
