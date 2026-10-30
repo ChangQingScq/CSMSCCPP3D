@@ -17,6 +17,10 @@ switch (EsMode)
             uniformCharacter./normGradientVec.^2 .*A_t)./sum(A_t);
         basicEnergy = sum ( ...
             (uniformCharacter./normGradientVec./Average + Average.*normGradientVec./uniformCharacter).*A_t);
+    case 5
+        ratio = uniformCharacter./normGradientVec.^2;
+        Average = sum(ratio.*A_t)/sum(A_t);
+        basicEnergy = sum((ratio./Average + Average./ratio).*A_t);
     otherwise
         basicEnergy = sum ((vecnorm(gradientVec,2,2)-sqrt((k_c + curvature2Gradient)/8)).^2 .*A_t);
 end
