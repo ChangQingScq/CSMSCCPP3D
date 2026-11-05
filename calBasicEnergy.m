@@ -17,10 +17,11 @@ switch (EsMode)
             uniformCharacter./normGradientVec.^2 .*A_t)./sum(A_t);
         basicEnergy = sum ( ...
             (uniformCharacter./normGradientVec./Average + Average.*normGradientVec./uniformCharacter).*A_t);
-    case 5
+    case 5 % symmetrized Itakura–Saito-type divergence. shen 2025 topology
         ratio = uniformCharacter./normGradientVec.^2;
-        Average = sum(ratio.*A_t)/sum(A_t);
-        basicEnergy = sum((ratio./Average + Average./ratio).*A_t);
+        totalArea = sum(A_t);
+        Average = sum(ratio.*A_t)/totalArea;
+        basicEnergy = sum((ratio./Average + Average./ratio).*A_t)/totalArea;
     otherwise
         basicEnergy = sum ((vecnorm(gradientVec,2,2)-sqrt((k_c + curvature2Gradient)/8)).^2 .*A_t);
 end
